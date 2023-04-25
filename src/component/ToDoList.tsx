@@ -9,7 +9,7 @@ interface Props {
 
 const ToDoList = (props: Props) => {
   const { toDoList, handleToggle, handleFilter } = props;
-
+const example = "pla"
   return (
     <div>
       {toDoList.map((todo:any) => {
