@@ -13,7 +13,7 @@ import './App.css';
 function App() {
   const [ toDoList, setToDoList ] = useState(data);
 
-  const handleToggle = (id) => {
+  const handleToggle = (id:any) => {
     let mapped = toDoList.map(task => {
       return task.id === id ? { ...task, complete: !task.complete } : { ...task};
     });
@@ -27,7 +27,7 @@ const handleFilter = () => {
    setToDoList(filtered);
  }
 
- const addTask = (userInput) => {
+ const addTask = (userInput:any) => {
   let copy = [...toDoList];
   copy = [...copy, { id: toDoList.length + 1, task: userInput, complete: false }];
   setToDoList(copy);
@@ -37,7 +37,7 @@ const handleFilter = () => {
  return (
    <div className="App">
      <Header />
-     <ToDoList toDoList={toDoList}/>
+     <ToDoList toDoList={toDoList} handleToggle={handleToggle} handleFilter={handleFilter}/>
      <ToDoForm addTask={addTask}/>
    </div>
  );
