@@ -11,7 +11,7 @@ const ToDoList = (props: Props) => {
   const { toDoList, handleToggle, handleFilter } = props;
 const example = "pla"
   return (
-    <div>
+    <div className="border-2 border-solid border-purple-700 w-1/4 flex flex-col items-center justify-center ml-80 mt-11 rounded">
       {toDoList.map((todo:any) => {
         return (
           <ToDo
@@ -21,7 +21,7 @@ const example = "pla"
           />
         );
       })}
-      <button style={{ margin: "20px" }} onClick={handleFilter}>
+      <button className="bg-purple-700 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded" style={{ margin: "20px" }} onClick={handleFilter}>
         Clear Completed
       </button>
     </div>
