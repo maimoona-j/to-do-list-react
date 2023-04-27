@@ -37,7 +37,7 @@ import { faCheckSquare } from '@fortawesome/free-solid-svg-icons'
 
 export default function ToDoForm() {
   return (
-    <div>
+    <div  className='p-4 sm:p-6'>
       <form className ="absolute top-1/3 left-1/2 shadow-2xl transform -translate-x-1/2 w-96 shadow-md bg-white rounded-md p-6" >
       <input
       
