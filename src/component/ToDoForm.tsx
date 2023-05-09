@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from "react"; // TODO: remove unused imports
 
 const ToDoForm = ({ addTask }: any) => {
-  const [userInput, setUserInput] = useState("");
+  // TODO:  make the props here same of props:Props interface to make system as 1 type method
+  const [userInput, setUserInput] = useState(""); // TODO:  select type of it
 
   const handleChange = (e: any) => {
     setUserInput(e.currentTarget.value);
@@ -12,6 +13,7 @@ const ToDoForm = ({ addTask }: any) => {
     addTask(userInput);
     setUserInput("");
   };
+
   return (
     <form
       className="w-full mt-4 md:w-96 mx-auto shadow-md bg-yellow-300 rounded-lg mb-4"

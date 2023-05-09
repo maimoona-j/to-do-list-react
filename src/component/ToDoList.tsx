@@ -67,11 +67,13 @@
 
 // export default ToDoList;
 
-import React from "react";
+// TODO: clean up the mess
+
+import React from "react"; // TODO: not used
 import ToDo from "./ToDo";
 
-interface Props {
-  toDoList: any[];
+interface Props {   // TODO:  start change "any"  with the appropriate type
+  toDoList: any[]; 
   handleToggle: any;
   handleFilter: any;
   handleDelete: any;
@@ -79,7 +81,7 @@ interface Props {
 }
 
 const ToDoList = (props: Props) => {
-  const { toDoList, handleToggle, handleFilter, handleDelete, className } =
+  const { toDoList, handleToggle, handleFilter, handleDelete, className } =  // TODO: why you put className and not used it? remove it or use it
     props;
 
   return (

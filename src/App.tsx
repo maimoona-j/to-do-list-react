@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react"; // TODO: not used React 
 
 // Components
 import Header from "./component/Header";
@@ -55,6 +55,16 @@ function App() {
     setToDoList(copy);
   };
 
+
+  // TODO: 
+  /* 
+  const handleDelete=(id:any)=>{
+    here you should delete one item from the toDoList
+  }
+  
+  after you finish this function go down there and pass it to the other components
+  */
+
   return (
     <div className="App">
       <Header />
@@ -63,7 +73,7 @@ function App() {
         toDoList={toDoList}
         handleToggle={handleToggle}
         handleFilter={handleFilter}
-        handleDelete={handleFilter}
+        handleDelete={handleFilter} // TODO: what is this?? it must be handleDelete 
       />
     </div>
   );
