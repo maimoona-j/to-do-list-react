@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 body{
-    background-color: rgb(255, 182, 47);
+    background-color:  #bb9cf2;
+    font-family: cursive;
+    font-size: 18px;
 }
+
+ 
