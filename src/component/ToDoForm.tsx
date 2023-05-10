@@ -1,7 +1,7 @@
-import React, { useState } from "react"; // TODO: remove unused imports
+import   { useState } from "react"; // TODO: remove unused imports     //DONE
 
 const ToDoForm = ({ addTask }: any) => {
-  // TODO:  make the props here same of props:Props interface to make system as 1 type method
+  // TODO:  make the props here same of props:Props interface to make system as 1 type method    // ???
   const [userInput, setUserInput] = useState(""); // TODO:  select type of it
 
   const handleChange = (e: any) => {
@@ -16,7 +16,7 @@ const ToDoForm = ({ addTask }: any) => {
 
   return (
     <form
-      className="w-full mt-4 md:w-96 mx-auto shadow-md bg-yellow-300 rounded-lg mb-4"
+      className="w-full mt-4 md:w-96 mx-auto shadow-md   rounded-lg mb-4"
       onSubmit={handleSubmit}
     >
       <div className="flex">
@@ -27,7 +27,7 @@ const ToDoForm = ({ addTask }: any) => {
           value={userInput}
           onChange={handleChange}
         />
-        <button className="bg-purple-700 hover:bg-gray-400 text-white hover:text-black px-4 py-2 rounded-tr-lg rounded-br-lg font-cursive">
+        <button className="bg-blue-700 hover:bg-gray-400 text-white hover:text-black px-4 py-2 rounded-tr-lg rounded-br-lg font-cursive">
           Submit
         </button>
       </div>

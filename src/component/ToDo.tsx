@@ -18,7 +18,7 @@ const ToDo = (props: Props) => {
 
   return (
     <div
-      className={`list-none py-5 px-4 w-full md:w-96 mx-auto font-cursive border-t border-dotted border-darkgray relative bg-purple-500 text-white ${
+      className={`list-none py-5 px-4 w-full md:w-96 mx-auto font-cursive border-t border-dotted border-darkgray relative bg-blue-700 text-white ${
         todo.complete ? "strike" : ""
       }`}
       style={{ textDecoration: todo.complete ? "line-through" : "none" }}
