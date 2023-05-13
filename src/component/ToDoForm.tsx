@@ -1,8 +1,16 @@
-import   { useState } from "react"; // TODO: remove unused imports     //DONE
+import { useState } from "react";
 
-const ToDoForm = ({ addTask }: any) => {
-  // TODO:  make the props here same of props:Props interface to make system as 1 type method    // ???
-  const [userInput, setUserInput] = useState(""); // TODO:  select type of it
+// TODO:  make the props here same of props:Props interface to make system as 1 type method    // ???
+
+// check the solution i mean here by adding Props
+
+interface Props {
+  addTask: (userInput: string) => void;
+}
+
+const ToDoForm = (props: Props) => {
+  const { addTask } = props; // I added this too 
+  const [userInput, setUserInput] = useState<string>(""); // TODO:  select type of it: solution : look how i added the type after useState
 
   const handleChange = (e: any) => {
     setUserInput(e.currentTarget.value);

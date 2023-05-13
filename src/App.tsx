@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react"; // TODO: not used React  //Done
+import  { useState, useEffect } from "react";
 
 // Components
 import Header from "./component/Header";
@@ -40,10 +40,18 @@ function App() {
   };
 
   const handleFilter = () => {
-    let filtered = toDoList.filter((task) => {
-      return !task.complete;
-    });
-    setToDoList(filtered);
+    // {Bug solved}: clear completed not working:
+
+    // old Code:
+
+    // let filtered = toDoList.filter((task) => {
+    //   return !task.complete;
+    // });
+    // setToDoList(filtered);
+
+
+    // new Code:
+    setToDoList([])
   };
 
   const addTask = (userInput: string) => {
@@ -55,15 +63,6 @@ function App() {
     setToDoList(copy);
   };
 
-
-  // TODO: 
-  /* 
-  const handleDelete=(id:any)=>{
-    here you should delete one item from the toDoList
-  }
-  
-  after you finish this function go down there and pass it to the other components
-  */
 
   const handleDelete = (id: number) => {
     let updatedList = toDoList.filter((task) => task.id !== id);
@@ -78,7 +77,7 @@ function App() {
         toDoList={toDoList}
         handleToggle={handleToggle}
         handleFilter={handleFilter}
-        handleDelete={handleDelete} // TODO: what is this?? it must be handleDelete 
+        handleDelete={handleDelete} 
       />
     </div>
   );

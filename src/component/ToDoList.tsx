@@ -1,15 +1,12 @@
-// TODO: clean up the mess   /DONE
 
-// import   from "react"; // TODO: not used    //DONE
 import ToDo from "./ToDo";
 
 interface Props {
-  // TODO:  start change "any"  with the appropriate type
+  // TODO:  start change "any"  with the appropriate type: solution: look the types i added
   toDoList: any[];
-  handleToggle: any;
-  handleFilter: any;
-  handleDelete: any;
-  className?: string;
+  handleToggle: (id: number) => void;
+  handleFilter: () => void;
+  handleDelete: (id: number) => void;
 }
 
 const ToDoList = (props: Props) => {
@@ -18,7 +15,7 @@ const ToDoList = (props: Props) => {
     handleToggle,
     handleFilter,
     handleDelete,
-  } = // TODO: why you put className and not used it? remove it or use it   //DONE
+  } = 
     props;
 
   return (
