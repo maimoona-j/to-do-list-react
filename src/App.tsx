@@ -40,8 +40,6 @@ function App() {
   };
 
   const handleFilter = () => {
-   
-
     let filtered = toDoList.filter((task) => {
       return !task.complete;
     });
@@ -49,8 +47,6 @@ function App() {
   };
 
   const handleClear = () => {
-    
-
     setToDoList([]);
   };
 
