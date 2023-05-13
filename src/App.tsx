@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 // Components
 import Header from "./component/Header";
@@ -40,18 +40,18 @@ function App() {
   };
 
   const handleFilter = () => {
-    // {Bug solved}: clear completed not working:
+   
 
-    // old Code:
+    let filtered = toDoList.filter((task) => {
+      return !task.complete;
+    });
+    setToDoList(filtered);
+  };
 
-    // let filtered = toDoList.filter((task) => {
-    //   return !task.complete;
-    // });
-    // setToDoList(filtered);
+  const handleClear = () => {
+    
 
-
-    // new Code:
-    setToDoList([])
+    setToDoList([]);
   };
 
   const addTask = (userInput: string) => {
@@ -62,7 +62,6 @@ function App() {
     ];
     setToDoList(copy);
   };
-
 
   const handleDelete = (id: number) => {
     let updatedList = toDoList.filter((task) => task.id !== id);
@@ -76,8 +75,9 @@ function App() {
       <ToDoList
         toDoList={toDoList}
         handleToggle={handleToggle}
+        handleClear={handleClear}
         handleFilter={handleFilter}
-        handleDelete={handleDelete} 
+        handleDelete={handleDelete}
       />
     </div>
   );

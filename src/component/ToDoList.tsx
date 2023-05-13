@@ -1,4 +1,3 @@
-
 import ToDo from "./ToDo";
 
 interface Props {
@@ -6,16 +5,12 @@ interface Props {
   toDoList: any[];
   handleToggle: (id: number) => void;
   handleFilter: () => void;
+  handleClear: () => void;
   handleDelete: (id: number) => void;
 }
 
 const ToDoList = (props: Props) => {
-  const {
-    toDoList,
-    handleToggle,
-    handleFilter,
-    handleDelete,
-  } = 
+  const { toDoList, handleToggle, handleFilter, handleClear, handleDelete } =
     props;
 
   return (
@@ -28,12 +23,33 @@ const ToDoList = (props: Props) => {
           handleDelete={handleDelete}
         />
       ))}
-      <button
-        className="bg-blue-700 text-white hover:bg-gray-400 m-20 hover:text-black px-4 py-2 rounded font-cursive "
-        onClick={handleFilter}
-      >
-        Clear Completed
-      </button>
+
+      <div className="flex flex-col items-center">
+        {toDoList.some((task) => task.complete) && (
+          <button
+            className="bg-blue-700 text-white hover:bg-gray-400 m-4 hover:text-black px-4 py-2 rounded font-cursive"
+            onClick={handleFilter}
+          >
+            Clear Completed
+          </button>
+        )}
+
+{toDoList.some((task) => task) && (
+          <button
+            className="bg-blue-700 text-white hover:bg-gray-400 m-4 hover:text-black px-4 py-2 rounded font-cursive"
+            onClick={handleClear}
+          >
+            Clear All
+          </button>
+        )}
+
+        {/* <button
+          className="bg-blue-700 text-white hover:bg-gray-400 m-2  hover:text-black px-4 py-2 rounded font-cursive "
+          onClick={handleClear}
+        >
+          Clear All
+        </button> */}
+      </div>
     </div>
   );
 };
